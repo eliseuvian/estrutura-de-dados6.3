@@ -1,0 +1,66 @@
+ Nó da classe :
+    def  __init__ ( self , dados ):
+        eu . data  =  data
+        eu . next  =  Nenhum
+
+# Classe que define um Fila
+ fila de classe :
+    def  __init__ ( self ):
+        eu . first  =  Nenhum
+        eu . last  =  None
+        eu . _size  =  0
+
+    # inserir na fila
+    def  push ( auto , elem ):
+        "" "Insere um elemento na fila" ""
+        nó  =  nó ( elem )
+        se  eu . last  is  None :
+            eu . last  =  node
+        mais :
+            eu . por último . next  =  nó
+            eu . last  =  node
+
+        se  eu . o primeiro  é  Nenhum :
+            eu . primeiro  =  nó
+
+        eu . _size  =  self . _size  +  1
+
+    # removedor da fila
+    def  pop ( auto ):
+        "" "Remover o elemento do topo da pilha" "" 
+        se  eu . _size  >  0 :
+            elem  =  self . primeiro . dados
+            eu . primeiro  =  eu . primeiro . Próximo
+            se  eu . o primeiro  é  Nenhum :
+                eu . last  =  None
+            ####################################
+            eu . _size  =  self . _size  -  1
+             elem de retorno
+        raise  IndexError ( "A fila está vazia" )
+
+    # observar o primeiro da fila
+    def  peek ( auto ):
+        "" "Retorna o topo sem removedor" ""
+        se  eu . _size  >  0 :
+            elem  =  self . primeiro . dados
+             elem de retorno
+        raise  IndexError ( "A fila está vazia" )
+
+
+    def  __len__ ( próprio ):
+        "" "Retorna o tamanho da lista" ""
+        retornar a  si mesmo . _Tamanho
+
+
+    def  __repr__ ( próprio ):
+        se  eu . _size  >  0 :
+            r  =  ""
+            ponteiro  =  auto . primeiro
+            while ( ponteiro ):
+                r  =  r  +  str ( ponteiro . dados ) +  ""
+                ponteiro  =  ponteiro . Próximo
+            retornar  r
+        retornar  "Fila vazia"
+
+    def  __str__ ( próprio ):
+        retornar a  si mesmo . __repr__ ()
